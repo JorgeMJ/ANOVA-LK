@@ -19,6 +19,11 @@ GOAL
 The goal of this experiment is to support or reject the following hypothesis: The cross population (cross) shows a different response
 from the control population (leuGAL4) to olfactory stimulus because the ability to release leucokinin of the cross is disable.
 
+DATA SET
+
+The data set contained in 'RI.csv' has been randomly generated based on the original data from the experiment that contributed to this
+publication https://doi.org/10.1016/j.peptides.2010.07.002
+
 MODEL
 
 We are comparing the responses of two populations that differ in their genotype by exposing them to five different concentrations of a
