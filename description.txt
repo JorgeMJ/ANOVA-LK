@@ -1,54 +1,89 @@
 INTRODUCTION
 
-This project is part of a much bigger study whose purpose is to understand the function of the neuropeptide leucokinin present in the fruit fly (Drosophila melanogaster). By the time this project was run, it was well known that the leucokinin had functions as neurohormone (such as regulating the excretion in several species of insects). However, little was known about the function in the nervous system. The visualization of the neurons that produce leucokinin shows that these neurons have projections reaching areas of the brain of D. melanogaster related to the olfactory memory. This leads us to think that leucokinin is involved in the processing of the olfactory stimuli. To test this idea, the following experiment was design.
-Two populations of D. melanogaster were generated: the control, carrying a genotype similar to the wild type, and a cross population genetically modified that was unable to release leucokinin.
-The experiment consisted in exposing samples of both populations to different concentrations (10-1,10-2, 10-3, 10-4, 10-5 ml/ml) of a given smell and measuring their responses. These responses were determined by the response index (RI) whose values ranges from -1 (total repulsion) to 1 (total attraction).
+This project is part of a much bigger study whose purpose is to understand the function of the neuropeptide leucokinin present
+in the fruit fly (Drosophila melanogaster). By the time this project was run, it was well known that the leucokinin had functions
+as neurohormone (such as regulating the excretion in several species of insects). However, little was known about the function in
+the nervous system. The visualization of the neurons that produce leucokinin shows that these neurons have projections reaching
+areas of the brain of D. melanogaster related to the olfactory memory. This leads us to think that leucokinin is involved in the
+processing of the olfactory stimuli. To test this idea, the following experiment was design.
+
+Two populations of D. melanogaster were generated: the control, carrying a genotype similar to the wild type, and a cross population
+genetically modified that was unable to release leucokinin.
+
+The experiment consisted in exposing samples of both populations to different concentrations (10-1,10-2, 10-3, 10-4, 10-5 ml/ml) of
+a given smell and measuring their responses. These responses were determined by the response index (RI) whose values ranges from -1
+(total repulsion) to 1 (total attraction).
 
 GOAL
 
-The goal of this experiment is to support or reject the following hypothesis: The cross population (cross) shows a different response from the control population (leuGAL4) to olfactory stimulus because the ability to release leucokinin of the cross is disable.
+The goal of this experiment is to support or reject the following hypothesis: The cross population (cross) shows a different response
+from the control population (leuGAL4) to olfactory stimulus because the ability to release leucokinin of the cross is disable.
 
 MODEL
 
-We are comparing the responses of two populations that differ in their genotype by exposing them to five different concentrations of a given smell (treatments). In other words, we expect that the two populations behave differently (show different RI) towards those treatments. Considering, that we are measuring their responses based on a continuous variable (RI), we can say that we have:
-• 1 dependent variable (Continuous): RI
+We are comparing the responses of two populations that differ in their genotype by exposing them to five different concentrations of a
+given smell (treatments). In other words, we expect that the two populations behave differently (show different RI) towards those 
+treatments. Considering, that we are measuring their responses based on a continuous variable (RI), we can say that we have:
+
+• 1 dependent variable (Continuous):
+    o RI
 • 2 independent variables:
-o Genotype (Categorical): (2 levels) Cross and leuGAL4
-o Concentration (Categorical): (5 levels) 10-1, 10-2, 10-3, 10-4, and 10-5
-The best model that suits our needs is a two-way ANOVA
+    o Genotype (Categorical): (2 levels) Cross and leuGAL4
+    o Concentration (Categorical): (5 levels) 10-1, 10-2, 10-3, 10-4, and 10-5
+     
+The best model that suits our needs is a two-way ANOVA.
+
 We test the following hypothesis:
+
 • Genotype:Concetration interactions:
-o H0 : there is not interaction
-o Ha : there is an interaction
+    o H0 : there is not interaction
+    o Ha : there is an interaction
+    
 • Main effect of factor Concentration:
-o H0 : μ 1 = μ 2 = μ 3 = μ 4 = μ 5
-o Ha : μ 1 ≠ μ 2 ≠ μ 3 ≠ μ 4 ≠ μ 5
+    o H0 : μ 1 = μ 2 = μ 3 = μ 4 = μ 5
+    o Ha : μ 1 ≠ μ 2 ≠ μ 3 ≠ μ 4 ≠ μ 5   (There is a difference at least between two concentrations)
+    
 • Main effect of factor Genotype:
-o H0 : μ1 = μ 2
-o Ha : μ 1 ≠ μ 2
+    o H0 : μ1 = μ 2
+    o Ha : μ 1 ≠ μ 2
 
 INTERPRETATION
 
 1. Checking assumptions:
-After fitting the regression model (OLS), we check that the assumptions are met ( Autocorrelation: Durban-Watson test, 2.204; Normality: Jarque-Bera test, 4.306 < 5.992 (p=0.05, df=2); Homoscedasticity: Omnibus test, 4.141; Multicollinearity: Condition Number test, 15.3 < 20 )
+After fitting the regression model (OLS), we check that the assumptions are met ( Autocorrelation: Durban-Watson test, 2.204; Normality:
+Jarque-Bera test, 4.306 < 5.992 (p=0.05, df=2); Homoscedasticity: Omnibus test, 4.141; Multicollinearity: Condition Number test, 15.3 <
+20 )
+
 2. Running the ANOVA to check if the interaction Genotype:Concentration has an effect on the RI:
 F value = 0.9206, p value= 0.4533, F statistic = 18.95
-There is no statistical significance to reject H0 because the p value is greater than the alpha=0.05. We conclude there is no interaction effect on RI.
+There is no statistical significance to reject H0 because the p value is greater than the alpha=0.05. We conclude there is no
+interaction effect on RI.
+
 We remove the interaction form the model and we run it again.
+
 3. Running the ANOVA to check the effect of each factor:
 After checking that the assumptions are still met, we pay attention to each factor.
-
 Concentration:
 F value = 39.961605, p value = 1.021405e-23, F statistic = 33.44
-The p value is smaller than alpha=0.05. Also, the probability to fall into a type 1 error is small. We conclude that there are differences at least between two levels of the concentration.
+The p value is smaller than alpha=0.05. Also, the probability to fall into a type 1 error is small. We conclude that there are 
+differences at least between two levels of the concentration.
 Genotype:
 F value=7.333515, p value = 7.443745e-03, F statistic = 33.44
-The p value is smaller than alpha=0.05, but the F value is small. We can reject H0 but the probability of rejecting it while being true is high.
+The p value is smaller than alpha=0.05, but the F value is small. We can reject H0 but the probability of rejecting it while being true
+is high.
+
 4. Effect size:
-We can see that the effect size of the concentration in the population is medium (>0.45), whereas the effect of the genotype is very small (aprox. 0.02).
+We can see that the effect size of the concentration in the population is medium (>0.45), whereas the effect of the genotype is very
+small (aprox. 0.02).
+
 5. Post hoc:
 We can see that there is a difference between all the different levels of the concentration except between 10^-3:10^-4 and 10^-4:10^-5.
 
 CONCLUSION
 
-There are differences between the groups mainly due to the differences between the concentrations (except 10^-3:10^-4 and 10^-4:10^-5.). This idea is reinforced by the medium size effect of the concentration on the population. Additionally, although there is a difference between the genotypes, it is very small. Thus, we cannot reject H0 (there is no difference between genotypes) without having a high probability of rejecting it while being true. It is also relevant to mention that the effect size of the genotype in the population is very small, meaning that it has very little effect on the RI.
+There are differences between the groups mainly due to the differences between the concentrations (except 10^-3:10^-4 and 10^-4:10^-5.).
+This idea is reinforced by the medium size effect of the concentration on the population. Additionally, although there is a difference
+between the genotypes, it is very small. Thus, we cannot reject H0 (there is no difference between genotypes) without having a high
+probability of rejecting it while being true. It is also relevant to mention that the effect size of the genotype in the population is
+very small, meaning that it has very little effect on the RI.
+
