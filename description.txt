@@ -45,12 +45,12 @@ We test the following hypothesis:
     o Ha : there is an interaction
     
 • Main effect of factor Concentration:
-    o H0 : μ 1 = μ 2 = μ 3 = μ 4 = μ 5
-    o Ha : μ 1 ≠ μ 2 ≠ μ 3 ≠ μ 4 ≠ μ 5   (There is a difference at least between two concentrations)
+    o H0 : μ1 = μ2 = μ3 = μ4 = μ5
+    o Ha : μ1 ≠ μ2 ≠ μ3 ≠ μ4 ≠ μ5   (There is a difference at least between two concentrations)
     
 • Main effect of factor Genotype:
-    o H0 : μ1 = μ 2
-    o Ha : μ 1 ≠ μ 2
+    o H0 : μ1 = μ2
+    o Ha : μ1 ≠ μ2
 
 INTERPRETATION
 
